@@ -4,7 +4,6 @@ local doNotSend
 local frame = CreateFrame("Frame")
 
 frame:RegisterEvent("CHAT_MSG_GUILD_ACHIEVEMENT")
-frame:RegisterEvent("CLUB_STREAM_SUBSCRIBED")
 frame:RegisterEvent("PLAYER_LOGIN")
 
 frame:SetScript("OnEvent", function(self, event, ...)
