@@ -1,0 +1,7 @@
+## Interface: 80300
+## Version: 1.0
+## Title: AutoGrats
+## Notes: Lets people know that you care about them by sending them a congratulations for earning achievements.
+## Author: iamlightsky
+
+Main.lua
