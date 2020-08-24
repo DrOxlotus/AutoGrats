@@ -5,8 +5,8 @@ local messages = {
 	[2] = "Congrats!",
 	[3] = "Congratulations!",
 	[4] = "Congo Rats!",
-	[5] = "Good job!",
-	[6] = "Nice work!",
+	[5] = "Congratulations on the achievement!",
+	[6] = "Bravo!",
 }
 
 tbl.messages = messages

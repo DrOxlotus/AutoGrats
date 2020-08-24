@@ -7,7 +7,7 @@ frame:RegisterEvent("CHAT_MSG_GUILD_ACHIEVEMENT")
 frame:RegisterEvent("PLAYER_LOGIN")
 
 local function GetMessage()
-	local randomNum = tonumber(math.random(1, 6))
+	local randomNum = tonumber(math.random(1, #tbl.messages))
 	return tbl.messages[randomNum]
 end
 
