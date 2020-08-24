@@ -6,6 +6,11 @@ local frame = CreateFrame("Frame")
 frame:RegisterEvent("CHAT_MSG_GUILD_ACHIEVEMENT")
 frame:RegisterEvent("PLAYER_LOGIN")
 
+local function GetMessage()
+	local randomNum = tonumber(math.random(1, 6))
+	return tbl.messages[randomNum]
+end
+
 frame:SetScript("OnEvent", function(self, event, ...)
 	if event == "CHAT_MSG_GUILD_ACHIEVEMENT" then
 		local text, playerName = ...
@@ -14,10 +19,11 @@ frame:SetScript("OnEvent", function(self, event, ...)
 			-- Do nothing if it's your own character. :(
 		else
 			if doNotSend ~= true then
+				local message = GetMessage()
 				doNotSend = true
 				C_Timer.After(0, function()
 					C_Timer.After(5, function()
-						SendChatMessage("GRATS!", "GUILD", nil, nil)
+						SendChatMessage(message, "GUILD", nil, nil)
 					end)
 				end)
 			end
