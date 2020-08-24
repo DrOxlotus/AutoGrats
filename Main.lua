@@ -23,7 +23,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
 				doNotSend = true
 				C_Timer.After(0, function()
 					C_Timer.After(5, function()
-						SendChatMessage(message, "GUILD", nil, nil)
+						SendChatMessage(message .. " @ " .. playerName, "GUILD", nil, nil)
 					end)
 				end)
 			end
