@@ -5,14 +5,14 @@ local randomMessages = {
 	[2] = "Congrats!",
 	[3] = "Congratulations!",
 	[4] = "Congo Rats!",
-	[5] = "Congratulations on the achievement!",
-	[6] = "Bravo!",
+	[5] = "Bravo!",
 }
 
 local responses = {
 	[1] = "thanks",
 	[2] = "ty",
 	[3] = "thank you",
+	[4] = "thx",
 }
 
 tbl.randomMessages = randomMessages
