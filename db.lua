@@ -1,6 +1,6 @@
 local addon, tbl = ...
 
-local messages = {
+local randomMessages = {
 	[1] = "GRATS!",
 	[2] = "Congrats!",
 	[3] = "Congratulations!",
@@ -9,4 +9,11 @@ local messages = {
 	[6] = "Bravo!",
 }
 
-tbl.messages = messages
+local responses = {
+	[1] = "thanks",
+	[2] = "ty",
+	[3] = "thank you",
+}
+
+tbl.randomMessages = randomMessages
+tbl.responses = responses

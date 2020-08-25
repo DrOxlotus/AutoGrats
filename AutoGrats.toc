@@ -4,5 +4,5 @@
 ## Notes: Lets people know that you care about them by sending them a congratulations for earning achievements.
 ## Author: iamlightsky
 
-MessageDB.lua
-Main.lua
+db.lua
+main.lua
