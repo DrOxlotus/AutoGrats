@@ -9,7 +9,7 @@ frame:RegisterEvent("CHAT_MSG_GUILD_ACHIEVEMENT")
 frame:RegisterEvent("PLAYER_LOGIN")
 
 local function GetRandomMessage()
-	local randomNum = tonumber(math.random(1, #tbl.messages))
+	local randomNum = tonumber(math.random(1, #tbl.randomMessages))
 	return tbl.randomMessages[randomNum]
 end
 
@@ -20,7 +20,12 @@ frame:SetScript("OnEvent", function(self, event, ...)
 		if achievementPlayers[playerName] then
 			for i = 1, #tbl.responses do
 				if string.find(text, tbl.responses[i]) then
-					SendChatMessage("yw!", "GUILD", nil, nil)
+					C_Timer.After(0, function()
+						C_Timer.After(3, function()
+							SendChatMessage("yw!", "GUILD", nil, nil)
+							achievementPlayers[playerName] = nil
+						end)
+					end)
 				end
 			end
 		end
