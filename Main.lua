@@ -22,7 +22,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
 				if string.find(text, tbl.responses[i]) then
 					C_Timer.After(0, function()
 						C_Timer.After(3, function()
-							SendChatMessage("yw!", "GUILD", nil, nil)
+							SendChatMessage("yw! @ " .. playerName, "GUILD", nil, nil)
 							achievementPlayers[playerName] = nil
 						end)
 					end)
