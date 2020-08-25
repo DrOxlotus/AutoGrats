@@ -19,7 +19,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
 		playerName = string.match(playerName, "(.-)-")
 		if achievementPlayers[playerName] then
 			for i = 1, #tbl.responses do
-				if string.find(text, tbl.responses[i]) do
+				if string.find(text, tbl.responses[i]) then
 					SendChatMessage("yw!", "GUILD", nil, nil)
 				end
 			end
