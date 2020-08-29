@@ -13,6 +13,7 @@ local responses = {
 	[2] = "ty",
 	[3] = "thank you",
 	[4] = "thx",
+	[5] = "thanc", -- Someone in my guild likes to be a troll
 }
 
 tbl.randomMessages = randomMessages
