@@ -15,18 +15,28 @@ end
 
 frame:SetScript("OnEvent", function(self, event, ...)
 	if event == "CHAT_MSG_GUILD" then
+		local sendYourWelcomeMessage = false
 		local text, playerName = ...
 		playerName = string.match(playerName, "(.-)-")
 		if achievementPlayers[playerName] then
+			for i = 1, #tbl.blacklist do
+				if playerName == tbl.blacklist[i] then
+					SendChatMessage(playerName .. ", I was told not to talk to you for a bit. Sorry. (" .. addon .. ")", "GUILD", nil, nil)
+				end
+			end
 			for i = 1, #tbl.responses do
 				if string.find(string.lower(text), tbl.responses[i]) then
-					C_Timer.After(0, function()
-						C_Timer.After(3, function()
-							SendChatMessage("yw! @ " .. playerName, "GUILD", nil, nil)
-							achievementPlayers[playerName] = nil
-						end)
-					end)
+					sendYourWelcomeMessage = true
+					break
 				end
+			end
+			if sendYourWelcomeMessage then
+				C_Timer.After(0, function()
+					C_Timer.After(3, function()
+						SendChatMessage("yw! @ " .. playerName, "GUILD", nil, nil)
+						achievementPlayers[playerName] = nil
+					end)
+				end)
 			end
 		end
 	end

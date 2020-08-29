@@ -16,5 +16,10 @@ local responses = {
 	[5] = "thanc", -- Someone in my guild likes to be a troll
 }
 
+local blacklist = {
+	[1] = "Rensette",
+}
+
 tbl.randomMessages = randomMessages
 tbl.responses = responses
+tbl.blacklist = blacklist
