@@ -1,6 +1,10 @@
 local addon, tbl = ...
 
-local randomMessages = {
+local blacklist = {
+	[1] = "Rensette",
+}
+
+local randomGratsMessages = {
 	[1] = "GRATS!",
 	[2] = "Congrats!",
 	[3] = "Congratulations!",
@@ -16,10 +20,13 @@ local responses = {
 	[5] = "thanc", -- Someone in my guild likes to be a troll
 }
 
-local blacklist = {
-	[1] = "Rensette",
+local thankYouResponses = {
+	[1] = "You're welcome, %s!",
+	[2] = "No problem, friend! @ %s",
+	[3] = "yw! @ %s",
 }
 
-tbl.randomMessages = randomMessages
-tbl.responses = responses
 tbl.blacklist = blacklist
+tbl.randomGratsMessages = randomGratsMessages
+tbl.responses = responses
+tbl.thankYouResponses = thankYouResponses
