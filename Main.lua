@@ -65,9 +65,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
 		end)
 		C_Timer.After(0, function()
 			C_Timer.After(120, function()
-				for i = 1, #achievementPlayers do
-					if (time() - achievementPlayers[i]) > 120 then
-						achievementPlayers[i] = nil
+				for k, v in pairs(achievementPlayers) do
+					if (time() - v) > 120 then
+						achievementPlayers[k] = nil
 					end
 				end
 			end)

@@ -18,6 +18,7 @@ local responses = {
 	[3] = "thank you",
 	[4] = "thx",
 	[5] = "thanc", -- Someone in my guild likes to be a troll
+	[6] = "thnks",
 }
 
 local thankYouResponses = {
